@@ -1,0 +1,20 @@
+<div class="container">
+  <p>Diretiva *ngSwitch</p>
+  <p>
+    <button class="btn btn-primary" (click)="botao = 'primary'">0001</button>
+  </p>
+  <p>
+      <button class="btn btn-secondary" (click)="botao = 'secondary'">0002</button>
+  </p>
+  <p>
+      <button class="btn btn-success" (click)="botao = 'success'">0003</button>
+    </p>
+</div>
+
+<div class="container" [ngSwitch]="botao">
+  <p *ngSwitchCase="'primary'">Primary</p>
+  <p *ngSwitchCase="'secondary'">Secondary</p>
+  <p *ngSwitchCase="'success'">Success</p>
+  <p *ngSwitchDefault>Aperte um botão</p>
+</div>
+

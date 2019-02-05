@@ -1,0 +1,31 @@
+<div class="container">
+  <button
+    [style.backgroundColor]="ativo ? 'blue' : 'gray'"
+    [style.color]="ativo ? 'white' : 'black'"
+    [style.fontWeight]="ativo ? 'bold': 'normal'"
+    [style.fontSize]="tamanhoFonte + 'px'"
+    (click)="alterar()"
+  >
+    Mudar
+  </button>
+  <br>
+  <label>Tamanho da fonte do botão:  </label>
+  <input type="text" [(ngModel)]="tamanhoFonte">
+
+  <br>
+  <h5>Style com diretiva ngStyle</h5>
+  <button
+    [ngStyle]="{
+      'backgroundColor': ativo ? 'blue' : 'gray',
+      'color': ativo ? 'white' : 'black',
+      'fontWeight': ativo ? 'bold': 'normal',
+      'fontSize': tamanhoFonte + 'px'
+    }"
+    (click)="alterar()"
+  >
+    Mudar
+  </button>
+  <br>
+  <label>Tamanho da fonte do botão:  </label>
+  <input type="text" [(ngModel)]="tamanhoFonte">
+</div>

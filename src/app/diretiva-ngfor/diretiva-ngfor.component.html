@@ -1,0 +1,11 @@
+<div class="container">
+    <h5>Diretiva *ngFor</h5>
+
+    <p>Cursos</p>
+
+    <ul>
+      <li *ngFor="let curso of cursos, let i = index">
+        {{ i + 1 }} - {{ curso }}
+      </li>
+    </ul>
+</div>

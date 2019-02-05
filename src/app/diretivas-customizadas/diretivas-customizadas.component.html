@@ -1,0 +1,27 @@
+<div class="container">
+    <h3 appFundoAmarelo>
+        Fundo amarelo com diretiva customizada
+    </h3>
+    <br>
+    <h3 appHighlightMouse>
+      Texto com highlight-mouse
+    </h3>
+    <br>
+    <h3 appHighlight [defaultColor]="'grey'" [highlightColor]="'red'">
+      Alterando style com direva customizada
+    </h3>
+    <br>
+
+    <div *ngIf="mostrarCurso">
+      <h3>Lista de cursos</h3>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="onMostrarCursos()">Exibir/Ocultar Cursos</button>
+
+    <div *ngIf="mostrarCurso">
+      <h3>Nossa lista de cursos</h3>
+    </div>
+    <div *ngElse="mostrarCurso">
+      <h3>Não temos cursos abertos no momento</h3>
+    </div>
+</div>

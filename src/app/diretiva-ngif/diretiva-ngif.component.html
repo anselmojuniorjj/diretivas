@@ -1,0 +1,30 @@
+<div class="container">
+    <h5>Diretiva *ngIf</h5>
+
+    <div *ngIf="cursos.length > 0">
+      lista aqui...
+    </div>
+    <div *ngIf="cursos.length == 0">
+      lista vazia
+    </div>
+
+    <div *ngIf="mostrarCursos">
+      lista aqui...
+    </div>
+    <div *ngIf="!mostrarCursos">
+      ocultando lista
+    </div>
+    <br>
+    <h5>Utilizando hidden</h5>
+    <div [hidden]="!mostrarCursos">
+      lista aqui
+    </div>
+    <div [hidden]="mostrarCursos">
+      ocultando lista
+    </div>
+
+    <br>
+
+    <button class="btn btn-primary" (click)="onMostrarCursos()">Mostar / Ocultar</button>
+
+</div>
